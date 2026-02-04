@@ -24,6 +24,39 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false">
+            <!-- AppsFlyer 初始化，无依赖 -->
+            <meta-data
+                android:name="com.studyh2g.androidstartupoptimizationdemo.initializer.AppsFlyerInitializer"
+                android:value="androidx.startup" />
+            <!-- Firebase 初始化，无依赖 -->
+            <meta-data
+                android:name="com.studyh2g.androidstartupoptimizationdemo.initializer.FirebaseCombinedInitializer"
+                android:value="androidx.startup" />
+            <!-- Facebook 初始化，无依赖 -->
+            <meta-data
+                android:name="com.studyh2g.androidstartupoptimizationdemo.initializer.FacebookManualInitializer"
+                android:value="androidx.startup" />
+            <!-- MLKit 初始化，无依赖 -->
+            <meta-data
+                android:name="com.studyh2g.androidstartupoptimizationdemo.initializer.MlKitInitializer"
+                android:value="androidx.startup" />
+        </provider>
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="${applicationId}.firebaseinitprovider"
+            tools:node="remove" />
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:authorities="${applicationId}.FacebookInitProvider"
+            tools:node="remove" />
+        <provider
+            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+            android:authorities="${applicationId}.mlkitinitprovider"
+            tools:node="remove" />
         <!--facebook-->
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

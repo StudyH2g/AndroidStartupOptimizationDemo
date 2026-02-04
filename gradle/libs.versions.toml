@@ -13,10 +13,12 @@ espressoCore = "3.7.0"
 lifecycleRuntimeKtx = "2.10.0"
 activityCompose = "1.12.3"
 composeBom = "2024.09.00"
+startupRuntime = "1.2.0"
 
 [libraries]
 af-android-sdk = { module = "com.appsflyer:af-android-sdk", version.ref = "afAndroidSdk" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-startup-runtime = { module = "androidx.startup:startup-runtime", version.ref = "startupRuntime" }
 face-detection = { module = "com.google.mlkit:face-detection", version.ref = "faceDetection" }
 facebook-core = { module = "com.facebook.android:facebook-core", version.ref = "facebookCore" }
 firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx" }
