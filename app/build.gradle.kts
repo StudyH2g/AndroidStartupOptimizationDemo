@@ -50,6 +50,8 @@ android {
     }
 }
 
+apply(plugin = libs.plugins.google.services.get().pluginId)
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -68,6 +70,9 @@ dependencies {
     implementation(libs.facebook.core)
     // camera
     implementation(libs.face.detection)
+    // firebase
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
