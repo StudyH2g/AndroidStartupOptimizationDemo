@@ -40,10 +40,11 @@
             <meta-data
                 android:name="com.studyh2g.androidstartupoptimizationdemo.initializer.FacebookManualInitializer"
                 android:value="androidx.startup" />
-            <!-- MLKit 初始化，无依赖 -->
+            <!-- MLKit 延迟初始化，默认禁用，需要时手动调用 -->
             <meta-data
                 android:name="com.studyh2g.androidstartupoptimizationdemo.initializer.MlKitInitializer"
-                android:value="androidx.startup" />
+                android:value="androidx.startup"
+                tools:node="remove" />
         </provider>
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"

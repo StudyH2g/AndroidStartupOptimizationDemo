@@ -6,15 +6,15 @@ import com.google.mlkit.vision.face.FaceDetection
 import timber.log.Timber
 
 /**
- * MLKit 初始化器
+ * MLKit 延迟初始化器
  *
  * 说明：由于在 AndroidManifest.xml 中使用 tools:node="remove" 移除了
  * MlKitInitProvider 的自动初始化，因此需要手动触发 MLKit 的初始化。
  *
- * MlKitInitProvider 原本在应用启动时自动初始化 MLKit 内部组件。
- * 我们通过调用 FaceDetection.getClient() 来达到相同的效果。
- *
- * 注意：不调用 close()，让 GC 自然回收临时实例即可。
+ * 优化策略：延迟初始化
+ * - 不在 Manifest 中注册，启动时不执行
+ * - 在需要使用人脸检测功能时，手动调用：
+ *   AppInitializer.getInstance(context).initializeComponent(MlKitInitializer::class.java)
  */
 class MlKitInitializer : Initializer<Unit> {
 
