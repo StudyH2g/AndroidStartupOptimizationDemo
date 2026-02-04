@@ -34,6 +34,7 @@ import com.studyh2g.androidstartupoptimizationdemo.ui.theme.AndroidStartupOptimi
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Theme_AndroidStartupOptimizationDemo)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
