@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidStartupOptimizationDemo</string>
+    <string name="facebook_app_id">1234567843955058</string>
+    <string name="facebook_client_token">12345678387953579123456781234567</string>
+</resources>
