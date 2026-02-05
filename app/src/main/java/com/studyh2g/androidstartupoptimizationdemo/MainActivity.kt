@@ -1,8 +1,6 @@
 package com.studyh2g.androidstartupoptimizationdemo
 
-import android.content.Context
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -25,7 +23,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.BlendMode.Companion.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -75,7 +72,6 @@ fun ContentScreen(modifier: Modifier) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // 修改点1：使用具体数字
         Text(
             text = "Current startup time: 380ms (P50)",
             style = MaterialTheme.typography.bodyLarge,
@@ -85,7 +81,6 @@ fun ContentScreen(modifier: Modifier) {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // 修改点2：添加目标数据
         Text(
             text = "Optimization target: < 320ms (-15.8%)",
             style = MaterialTheme.typography.bodyLarge,
