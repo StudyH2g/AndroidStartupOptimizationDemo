@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AndroidStartupOptimizationDemo"
 include(":app")
- 
+include(":baselineprofile")
